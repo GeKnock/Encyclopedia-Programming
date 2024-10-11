@@ -1,0 +1,8 @@
+<div class="menu-container" (mouseover)="setStatusShowMenu('show')" (mouseout)="setStatusShowMenu('hide')" >
+  <button class="menu-button" (mouseover)="setStatusShowMenu('toggle')">Header-Empty</button>
+  <div>
+    <ul class="menu" [ngClass]="{open: isOpenMenu}">
+      <li *ngFor="let item of liitem;"><a href="#">{{item}}</a></li>
+    </ul>
+  </div>
+</div>

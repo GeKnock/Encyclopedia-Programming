@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgClass, NgForOf} from "@angular/common";
-import {liitem} from "./nav-item.component.data";
+import {TextList} from "./nav-item.component.model";
 
 @Component({
   selector: 'app-nav-item',
@@ -14,7 +14,13 @@ import {liitem} from "./nav-item.component.data";
 })
 export class NavItemComponent {
 
+  public textMenu = [
+    new TextList("Description 1"), new TextList("Description 2"), new TextList("Description 3"), new TextList("Description 4"),
+  ]
+
   public isOpenMenu: boolean = false;
+  @Input() public datam: any;
+  @Input() public header: any;
 
   public setStatusShowMenu (method: string) {
 
@@ -30,6 +36,4 @@ export class NavItemComponent {
 
 
   }
-
-  protected readonly liitem = liitem;
 }

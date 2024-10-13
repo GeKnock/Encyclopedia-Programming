@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NavItemComponent } from "./nav-item/nav-item.component";
-import {Config} from "./app.component.data";
+import { NavItemComponent } from "./nav-item/nav-item.component";
+import { Config } from "./app.component.data";
 
 @Component({
   selector: 'app-root',
@@ -11,12 +11,13 @@ import {Config} from "./app.component.data";
   styleUrl: './app.component.less'
 })
 export class AppComponent {
-  public test: string = 'Test Angular Project Encyclopedia-Programming v-0.0.12';
+  public test: string = 'Test Angular Project Encyclopedia-Programming v-0.0.25';
 
   public configApp: any = Config;
 
-  public htmlV: Array<string> = this.configApp.htmlv;
-  public cssV: Array<string> = this.configApp.cssv;
-  public jsV: Array<string> = this.configApp.jsv;
+  public htmlV: Array<string> = this.configApp.htmlV;
+  public cssV: Array<string> = this.configApp.cssV;
+  public jsV: Array<string> = this.configApp.jsV;
+  public headerV: Array<string> = this.configApp.headerV;
 
 }

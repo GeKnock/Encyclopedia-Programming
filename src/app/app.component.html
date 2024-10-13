@@ -2,12 +2,9 @@
   {{ test }}
 </div>
 <div class="posit">
-  <app-nav-item header="HTML" [datam]="htmlV"></app-nav-item>
-  <app-nav-item header="CSS" [datam]="cssV"></app-nav-item>
-  <app-nav-item header="JavaScript" [datam]="jsV"></app-nav-item>
-</div>
-<div class="test">
-  {{ test }}
+  <app-nav-item [header]="headerV[0]" [data]="htmlV"></app-nav-item>
+  <app-nav-item [header]="headerV[1]" [data]="cssV"></app-nav-item>
+  <app-nav-item [header]="headerV[2]" [data]="jsV"></app-nav-item>
 </div>
 
 <router-outlet />

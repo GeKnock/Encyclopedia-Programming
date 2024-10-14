@@ -1,7 +1,7 @@
-<div [ngClass]="{ 'menu-container': true}" (mouseover)="setStatusShowMenu('show')" (mouseout)="setStatusShowMenu('hide')">
+<div [ngClass]="{ 'menu-container': true}"  (mouseover)="setStatusShowMenu('show')" (mouseout)="setStatusShowMenu('hide')">
   <button [ngClass]="getCombinedClasses()" (mouseover)="setStatusShowMenu('toggle')">{{header}}</button>
   <div>
-    <ul [ngClass]="{open: isOpenMenu, menu: true}">
+    <ul [ngClass]="{open: isOpenMenu, menu: true}" data-show="hide">
       <li *ngFor="let item of data;">
           <a href="#">{{item}}</a>
       </li>
